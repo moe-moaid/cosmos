@@ -1,13 +1,10 @@
 import Image from "next/image";
 import React from "react";
-import getConfig from 'next/config';
-
-const { publicRuntimeConfig } = getConfig();
 
 function Video() {
   return (
     <div className="relative flex flex-row justify-center items-center w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[600px] xl:h-[763px] mt-20">
-      <Image src={`${publicRuntimeConfig.basePath}/images/thumbnail.png`} fill sizes="100vw" alt="Video Thumbnail" />
+      <Image src="/images/thumbnail.png" fill sizes="100vw" alt="Video Thumbnail" />
       <button className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 outline-none stroke-none border-none bg-transparent ">
         <p className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white light">Play</p>
         <svg

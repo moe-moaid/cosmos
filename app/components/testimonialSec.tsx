@@ -2,9 +2,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import getConfig from 'next/config';
-
-const { publicRuntimeConfig } = getConfig();
 
 const people = [
   {
@@ -45,7 +42,7 @@ function TestimonialSec() {
     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start">
       <div className="relative w-[90%] h-[330px] lg:w-[30%] lg:h-[350px] mx-auto lg:ms-36 lg:-mt-24">
         <Image
-          src={`${publicRuntimeConfig.basePath}/images/baloon.png`}
+          src="/images/baloon.png"
           fill
           sizes="max-w-[589px]"
           alt="baloon image"
@@ -86,7 +83,7 @@ function TestimonialSec() {
               }`}
             >
               <Image
-                src={`${publicRuntimeConfig.basePath}${person.image}`}
+                src={person.image}
                 alt={person.name}
                 width={96}
                 height={96}

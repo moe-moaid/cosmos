@@ -1,9 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Topography from "./topography";
-import getConfig from 'next/config';
 
-const { publicRuntimeConfig } = getConfig();
 function Ideas() {
   const cards = [
     {
@@ -252,7 +250,7 @@ function Ideas() {
           fill-opacity="0.2"
         />
       </svg>
-      <Image className="hidden lg:block absolute bottom-0 right-0 size-[800px]" src={`${publicRuntimeConfig.basePath}/images/customFade.svg`} width={568} height={376} alt="image" />
+      <Image className="hidden lg:block absolute bottom-0 right-0 size-[800px]" src='/images/customFade.svg' width={568} height={376} alt="image" />
       {/* mainCard */}
       <div className="relative w-[95%] lg:w-[85%] xl:w-[80%] 2xl:w-[67%] rounded-2xl px-2 lg:px-0 bg-[#1A1717] pt-16 mt-24 mx-auto">
         <Topography />
@@ -260,7 +258,7 @@ function Ideas() {
           <p className="text-white light text-[18px] md:text-[20px] lg:text-[50px]">
             Unique <span className="text-white bold">Ideas</span>
           </p>
-          <Image className="w-24 md:w-36 lg:w-44 xl:w-[200px]" src={`${publicRuntimeConfig.basePath}/images/pc.png`} width={220} height={64} alt="pcImage" />
+          <Image className="w-24 md:w-36 lg:w-44 xl:w-[200px]" src="/images/pc.png" width={220} height={64} alt="pcImage" />
         </div>
 
         <div className="flex flex-row justify-center items-center gap-5">
