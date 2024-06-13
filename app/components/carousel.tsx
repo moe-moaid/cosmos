@@ -2,6 +2,9 @@
 import React from "react";
 import Slider from "react-slick";
 import Image from "next/image";
+import getConfig from 'next/config';
+
+const { publicRuntimeConfig } = getConfig();
 const slides = [
   {
     date: "February-22th 2024",
@@ -67,7 +70,7 @@ function Carousel() {
                 <p className="text-[#B0B0B0] light">{slide.description}</p>
               )}
               <Image
-                src={slide.image}
+                src={`${publicRuntimeConfig.basePath}${slide.image}`}
                 alt={slide.title}
                 width={300}
                 height={200}

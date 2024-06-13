@@ -6,6 +6,9 @@ import Image from "next/image";
 import FadeColor from "./fadeColor";
 import Spiral from "./spiral";
 import Line from "./line";
+import getConfig from 'next/config';
+
+const { publicRuntimeConfig } = getConfig();
 
 function Hero() {
   return (
@@ -31,7 +34,7 @@ function Hero() {
         <div className="relative">
           <Image
             className="mt-8 w-[90%] 2xl:w-[80%] mx-auto xl:ms-[20%]"
-            src="/images/meeting.png"
+            src={`${publicRuntimeConfig.basePath}/images/meeting.png`}
             width={800}
             height={400}
             alt="meeting"
