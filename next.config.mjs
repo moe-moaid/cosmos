@@ -2,7 +2,6 @@
 
 const nextConfig = {
   basePath: "/cosmos",
-  assetPrefix: "/cosmos/",
   output: "export",
 };
 
